@@ -9,10 +9,10 @@ def load_module():
     
     try:
         if 'aarch64' in arch:
-            import gen64 as mod
+            import mystery as mod
             print("Loaded 64-bit module")
         elif 'armv7' in arch or 'armv8l' in arch or ('arm' in arch and '64' not in arch):
-            import gen32 as mod
+            import mystery32 as mod
             print("Loaded 32-bit module")
         else:
             print("Unsupported Device:", arch)
